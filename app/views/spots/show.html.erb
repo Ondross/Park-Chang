@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+
+Spot Rating: <%= @spot.rating %>
+<% if @spot.handicap == true %>
+<p> This spot has handicap parking, too! Woo! </p>
+<% else %>
+<p> This spot does not have handicap parking </p>
+<% end %>
+
+<% if @spot.cost == true %>
+<p> This spot is not free </p>
+<% else %>
+<p> This spot is free! </p>
+<% end %>
+<p> Comments: <% @spot.comments %> </p>
+
+<%= link_to 'Upvote', upvote_spot_path(@spot), :method => :post %>
+<%= link_to 'Downvote', downvote_spot_path(@spot), :method => :post %>
+
+<%= link_to 'Back', spots_path %>

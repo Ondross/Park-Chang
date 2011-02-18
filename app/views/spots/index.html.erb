@@ -1,0 +1,25 @@
+<br /><center><%= raw Cartographer::Header.new.to_s %>
+<%= raw @map.to_html %>
+
+<%= image_tag "logo.png", :alt => 'Park Chang' %><h1>Parking Spots Near You</h1><br />
+
+<div id="map" ></div></table>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @spots.each do |spot| %>
+  <tr>
+
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Spot', new_spot_path %>
+</center>
